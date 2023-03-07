@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "AnyCodable",
-    platforms: [.iOS(.v11), .macOS(.v11), .watchOS(.v4), .tvOS(.v11), .macCatalyst(.v13)],
+    platforms: [.iOS(.v14), .macOS(.v11), .watchOS(.v7), .tvOS(.v14), .macCatalyst(.v14)],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
