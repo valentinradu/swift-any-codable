@@ -36,13 +36,6 @@ targets: [
 
 No. While `_mangledTypeName`, `_typeByName` and `_typeName` are private, they are not part of Apple frameworks, but rather part of Swift. 
 Additionally, Apple's own [distributed actors](https://github.com/apple/swift-distributed-actors.git) implementation uses the same approach
-
-### Why doesn't Swift natively support `AnyCodable`?
-
-You may be wondering why Swift doesn't have its own Codable type erasure. In short, there were two reasons for this:
-
-1. In the early years of Swift, the language was evolving rapidly, and type mangling was not yet stable. This meant that entities encoded with one version of Swift might not be decodable with the next version, as the same entity could have a different internal mangled name.
-2. Swift's designers wanted to encourage programmers to write safe code, and `AnyCodable` presented an opportunity for attackers to exploit (see below). However, in the end, the benefits outweighed the risks and now we're having `_mangledTypeName`, `_typeByName`, and `_typeName`. 
     
 ### Is this safe?
 
